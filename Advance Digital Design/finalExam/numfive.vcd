@@ -1,0 +1,137 @@
+$date
+	Fri Dec 10 14:48:33 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module numberFive_tb $end
+$var wire 1 ! Y $end
+$var wire 1 " X $end
+$var wire 1 # V $end
+$var reg 1 $ D1 $end
+$var reg 1 % D2 $end
+$var reg 1 & D3 $end
+$var reg 1 ' D4 $end
+$scope module test_branch $end
+$var wire 1 ( D0 $end
+$var wire 1 $ D1 $end
+$var wire 1 % D2 $end
+$var wire 1 ) D2_not $end
+$var wire 1 & D3 $end
+$var wire 1 ' D4 $end
+$var wire 1 # V $end
+$var wire 1 " X $end
+$var wire 1 ! Y $end
+$var wire 1 * one $end
+$var wire 1 + two $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x+
+x*
+x)
+z(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#10000
+0*
+0$
+#20000
+1#
+0)
+1+
+1"
+1%
+#30000
+0!
+0&
+#40000
+1'
+#50000
+1$
+#80000
+0'
+#100000
+1!
+1*
+1)
+0+
+0"
+0%
+#110000
+1+
+1"
+1&
+#150000
+0+
+0"
+0&
+#160000
+1'
+#200000
+0'
+#210000
+0!
+0*
+x#
+0$
+#250000
+1!
+1*
+1#
+1$
+#270000
+1+
+1"
+1&
+#290000
+0*
+0$
+#300000
+0)
+1%
+#330000
+1$
+#380000
+1*
+1)
+0%
+#400000
+1'
+#430000
+0+
+0"
+0&
+#460000
+0!
+0*
+0)
+1+
+1"
+1%
+#470000
+1!
+1&
+#490000
+0$
+#540000
+1)
+0%
+#590000
+x#
+0!
+0+
+0"
+0&
+#600000

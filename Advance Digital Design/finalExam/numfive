@@ -1,0 +1,252 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x555be9a0e410 .scope module, "numberFive_tb" "numberFive_tb" 2 9;
+ .timescale -9 -12;
+v0x555be9a32200_0 .var "D1", 0 0;
+v0x555be9a322c0_0 .var "D2", 0 0;
+v0x555be9a32390_0 .var "D3", 0 0;
+v0x555be9a32490_0 .var "D4", 0 0;
+v0x555be9a32560_0 .net "V", 0 0, L_0x555be9a32cf0;  1 drivers
+v0x555be9a32600_0 .net "X", 0 0, L_0x555be9a32ba0;  1 drivers
+v0x555be9a326d0_0 .net "Y", 0 0, L_0x555be9a329a0;  1 drivers
+S_0x555be9a0e590 .scope module, "test_branch" "numberFive" 2 13, 3 1 0, S_0x555be9a0e410;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "Y"
+    .port_info 1 /OUTPUT 1 "X"
+    .port_info 2 /OUTPUT 1 "V"
+    .port_info 3 /INPUT 1 "D1"
+    .port_info 4 /INPUT 1 "D2"
+    .port_info 5 /INPUT 1 "D3"
+    .port_info 6 /INPUT 1 "D4"
+L_0x555be9a327a0 .functor NOT 1, v0x555be9a322c0_0, C4<0>, C4<0>, C4<0>;
+L_0x555be9a32890 .functor AND 1, L_0x555be9a327a0, v0x555be9a32200_0, C4<1>, C4<1>;
+L_0x555be9a329a0 .functor OR 1, L_0x555be9a32890, v0x555be9a32390_0, C4<0>, C4<0>;
+L_0x555be9a32b00 .functor OR 1, v0x555be9a322c0_0, v0x555be9a32390_0, C4<0>, C4<0>;
+L_0x555be9a32ba0 .functor OR 1, v0x555be9a322c0_0, v0x555be9a32390_0, C4<0>, C4<0>;
+o0x7f25685a1018 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x555be9a32cf0 .functor OR 1, L_0x555be9a32b00, v0x555be9a32200_0, o0x7f25685a1018, C4<0>;
+v0x555be99d7120_0 .net "D0", 0 0, o0x7f25685a1018;  0 drivers
+v0x555be9a31970_0 .net "D1", 0 0, v0x555be9a32200_0;  1 drivers
+v0x555be9a31a30_0 .net "D2", 0 0, v0x555be9a322c0_0;  1 drivers
+v0x555be9a31ad0_0 .net "D2_not", 0 0, L_0x555be9a327a0;  1 drivers
+v0x555be9a31b90_0 .net "D3", 0 0, v0x555be9a32390_0;  1 drivers
+v0x555be9a31ca0_0 .net "D4", 0 0, v0x555be9a32490_0;  1 drivers
+v0x555be9a31d60_0 .net "V", 0 0, L_0x555be9a32cf0;  alias, 1 drivers
+v0x555be9a31e20_0 .net "X", 0 0, L_0x555be9a32ba0;  alias, 1 drivers
+v0x555be9a31ee0_0 .net "Y", 0 0, L_0x555be9a329a0;  alias, 1 drivers
+v0x555be9a31fa0_0 .net "one", 0 0, L_0x555be9a32890;  1 drivers
+v0x555be9a32060_0 .net "two", 0 0, L_0x555be9a32b00;  1 drivers
+    .scope S_0x555be9a0e410;
+T_0 ;
+    %vpi_call 2 28 "$dumpfile", "numfive.vcd" {0 0 0};
+    %vpi_call 2 29 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x555be9a0e410 {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 35 "$display", "done testing case 0" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 41 "$display", "done testing case 2" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 47 "$display", "done testing case 3" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 53 "$display", "done testing case 4" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 59 "$display", "done testing case 5" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 65 "$display", "done testing case 6" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 71 "$display", "done testing case 7" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 77 "$display", "done testing case 8" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 83 "$display", "done testing case 9" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 89 "$display", "done testing case 10" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 95 "$display", "done testing case 11" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 101 "$display", "done testing case 12" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 107 "$display", "done testing case 13" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 114 "$display", "done testing case 14" {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32200_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a322c0_0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x555be9a32390_0;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x555be9a32490_0;
+    %vpi_call 2 120 "$display", "done testing case 15" {0 0 0};
+    %vpi_call 2 122 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "numfive_tb.v";
+    "./numfive.v";

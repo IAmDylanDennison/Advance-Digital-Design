@@ -1,0 +1,97 @@
+$date
+	Fri Nov 12 12:49:05 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module lab4_tb $end
+$var wire 1 ! Alarm $end
+$var reg 1 " Door $end
+$var reg 1 # Enable $end
+$var reg 1 $ Exiting $end
+$var reg 1 % Garage $end
+$var reg 1 & Panic $end
+$var reg 1 ' Window $end
+$scope module test_branch $end
+$var wire 1 " Door $end
+$var wire 1 # Enable $end
+$var wire 1 $ Exiting $end
+$var wire 1 % Garage $end
+$var wire 1 & Panic $end
+$var wire 1 ' Window $end
+$var reg 1 ! Alarm $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#10000
+0&
+#20000
+0!
+0#
+#30000
+0$
+#40000
+0'
+#50000
+0"
+#60000
+0%
+#70000
+1!
+1&
+#80000
+1#
+#90000
+1$
+#100000
+1'
+#130000
+0!
+0&
+#140000
+0#
+#150000
+0$
+#170000
+1"
+#180000
+1%
+#200000
+1#
+#210000
+1$
+#280000
+0'
+#290000
+0"
+#300000
+0%
+#320000
+0#
+#350000
+1"
+#380000
+1#
+#390000
+1!
+0$
+#430000
+1&
+#440000
+0#
+#470000
+0"
+#480000

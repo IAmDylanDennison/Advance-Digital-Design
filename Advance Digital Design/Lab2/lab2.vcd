@@ -1,0 +1,95 @@
+$date
+	Fri Oct 22 18:15:43 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module lab2_tb $end
+$var wire 4 ! fourBits [3:0] $end
+$var reg 1 " clock $end
+$var reg 1 # reset $end
+$scope module test_b $end
+$var wire 1 " clock $end
+$var wire 1 # reset $end
+$var reg 4 $ fourBits [3:0] $end
+$var integer 32 % increment [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 %
+b0 $
+1#
+1"
+b0 !
+$end
+#10
+0"
+#20
+1"
+#30
+0"
+#40
+1"
+#50
+0"
+#60
+1"
+#70
+0"
+#80
+1"
+#90
+0"
+#100
+b1 !
+b1 $
+0#
+0"
+#110
+b10 !
+b10 $
+1"
+#120
+0"
+#130
+b11 !
+b11 $
+1"
+#140
+0"
+#150
+b100 !
+b100 $
+1"
+#160
+0"
+#170
+b101 !
+b101 $
+1"
+#180
+0"
+#190
+b110 !
+b110 $
+1"
+#200
+0"
+#210
+b111 !
+b111 $
+1"
+#220
+0"
+#230
+b1000 !
+b1000 $
+1"
+#240
+0"
+#245

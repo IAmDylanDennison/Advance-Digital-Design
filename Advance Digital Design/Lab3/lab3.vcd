@@ -1,0 +1,94 @@
+$date
+	Thu Oct 28 13:51:44 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module lab3_tb $end
+$var wire 1 ! F $end
+$var reg 1 " X $end
+$var reg 1 # Y $end
+$var reg 1 $ Z $end
+$scope module test_branch $end
+$var wire 1 ! F $end
+$var wire 1 " X $end
+$var wire 1 % XY_not $end
+$var wire 1 & XY_notZ $end
+$var wire 1 ' X_not $end
+$var wire 1 ( X_notYZ_not $end
+$var wire 1 # Y $end
+$var wire 1 ) Y_not $end
+$var wire 1 $ Z $end
+$var wire 1 * Z_not $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x*
+x)
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#10000
+1'
+0"
+#20000
+1%
+1)
+0(
+0#
+#30000
+0!
+1*
+0&
+0$
+#40000
+0'
+1"
+#80000
+0)
+1#
+#110000
+1)
+0#
+#120000
+1!
+0*
+1&
+1$
+#140000
+0)
+1#
+#160000
+0!
+0&
+1'
+0%
+0"
+#180000
+1!
+1(
+1*
+0$
+#210000
+0!
+0(
+0*
+1$
+#230000
+1!
+1&
+1%
+1)
+0#
+#240000

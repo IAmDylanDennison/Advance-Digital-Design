@@ -1,0 +1,75 @@
+$date
+	Fri Nov 19 13:08:46 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module lab5_tb $end
+$var wire 1 ! E $end
+$var wire 1 " D $end
+$var wire 1 # C $end
+$var reg 1 $ A $end
+$var reg 1 % B $end
+$scope module test_branch $end
+$var wire 1 $ A $end
+$var wire 1 & A_not $end
+$var wire 1 % B $end
+$var wire 1 ' B_not $end
+$var wire 1 # C $end
+$var wire 1 " D $end
+$var wire 1 ! E $end
+$var wire 1 ( one $end
+$var wire 1 ) two $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x)
+x(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#10000
+1&
+0)
+0$
+#20000
+1"
+1'
+0(
+0#
+0!
+0%
+#30000
+0"
+0&
+1)
+1$
+#50000
+1"
+1&
+0)
+0$
+#60000
+0"
+0'
+1(
+1#
+0!
+1%
+#70000
+1"
+0(
+0#
+0&
+1$
+#80000
